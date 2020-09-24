@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var memeModel = MemeModel(memeService: MemeService())
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            ForEach(memeModel.memes, id: \.self) { meme in
+                Text(meme.name)
+            }
+            Text("stuff")
+        }
     }
 }
 

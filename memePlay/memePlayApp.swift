@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct memePlayApp: App {
+struct MemePlayApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
 }
+
