@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		2115364825197071005F1AF0 /* GetMemesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2115364725197071005F1AF0 /* GetMemesResponse.swift */; };
 		2115364D251970D2005F1AF0 /* MemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2115364C251970D2005F1AF0 /* MemeService.swift */; };
 		2115365525197845005F1AF0 /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2115365425197845005F1AF0 /* MemeModel.swift */; };
+		212BC510251C74830017E73F /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 212BC50F251C74830017E73F /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212BC510251C74830017E73F /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +157,9 @@
 			dependencies = (
 			);
 			name = memePlay;
+			packageProductDependencies = (
+				212BC50F251C74830017E73F /* URLImage */,
+			);
 			productName = memePlay;
 			productReference = 2115361625196F65005F1AF0 /* memePlay.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +231,9 @@
 				Base,
 			);
 			mainGroup = 2115360D25196F65005F1AF0;
+			packageReferences = (
+				212BC50E251C74830017E73F /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 2115361725196F65005F1AF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -592,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		212BC50E251C74830017E73F /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.19;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		212BC50F251C74830017E73F /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 212BC50E251C74830017E73F /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2115360E25196F65005F1AF0 /* Project object */;
 }

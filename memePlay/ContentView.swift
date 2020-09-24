@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct ContentView: View {
     
@@ -13,10 +14,18 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            ForEach(memeModel.memes, id: \.self) { meme in
-                Text(meme.name)
+            ScrollView {
+                ForEach(memeModel.memes, id: \.self) { meme in
+                    VStack {
+                        Text(meme.name)
+                        URLImage(URL(string: meme.url)!) { proxy in
+                            proxy.image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }
+                    }
+                }
             }
-            Text("stuff")
         }
     }
 }

@@ -18,9 +18,7 @@ final class MemeService: MemeServiceProtocol {
     func getMemes() -> AnyPublisher<Welcome, Error> {
         return URLSession.shared.dataTaskPublisher(for: MemeService.url)
             .map { $0.data }
-            .print("mapped to data")
             .decode(type: Welcome.self, decoder: JSONDecoder())
-            .print("decoded")
             .eraseToAnyPublisher()
     }
 }
